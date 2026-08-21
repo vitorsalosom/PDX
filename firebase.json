@@ -1,0 +1,55 @@
+{
+  "hosting": {
+    "site": "pagodedoxando",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md",
+      "GUIA-DO-CLIENTE.md",
+      "GUIA-DO-ADMIN.md",
+      "PUBLICAR-SITE.bat",
+      "limpar-fotos-sem-uso.js",
+      "netlify.toml"
+    ],
+    "headers": [
+      {
+        "source": "assets/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "assets/img/uploads/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=600, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300"
+          }
+        ]
+      },
+      {
+        "source": "content/site.json",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ]
+  }
+}

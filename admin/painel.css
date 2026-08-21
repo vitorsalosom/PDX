@@ -1,0 +1,156 @@
+/* ============================================================
+   Aparência do painel PDX
+   O Decap CMS gera nomes de classe automáticos, então os seletores
+   miram trechos estáveis desses nomes ([class*="..."]) e as tags.
+   ============================================================ */
+
+:root {
+  --pdx-roxo: #8338EC;
+  --pdx-roxo-esc: #5B21A8;
+  --pdx-noite: #3A1470;
+  --pdx-amarelo: #FFBE0B;
+  --pdx-creme: #F3D9C9;
+  --pdx-fundo: #F7F5FB;
+  --pdx-borda: #E4DAF5;
+}
+
+/* ---------- base ---------- */
+body, input, textarea, select, button, [class*="Control"], [class*="Widget"] {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+body { background: var(--pdx-fundo) !important; }
+
+/* ---------- barra do topo ---------- */
+[class*="AppHeader"] {
+  background: linear-gradient(90deg, var(--pdx-roxo) 0%, var(--pdx-roxo-esc) 100%) !important;
+  box-shadow: 0 2px 16px rgba(58, 20, 112, .22) !important;
+  border: 0 !important;
+}
+[class*="AppHeader"] a, [class*="AppHeader"] button { color: #fff !important; }
+[class*="AppHeaderButton"] {
+  border-radius: 999px !important; padding: 8px 16px !important;
+  background: rgba(255,255,255,.14) !important; border: 0 !important;
+}
+[class*="AppHeaderButton"]:hover { background: rgba(255,255,255,.26) !important; }
+
+/* ---------- área de trabalho ---------- */
+[class*="EditorContainer"], [class*="ControlPaneContainer"] { background: var(--pdx-fundo) !important; }
+[class*="CardsGrid"], [class*="EditorContent"] { max-width: 1080px !important; margin: 0 auto !important; }
+
+/* ---------- cartão de cada campo ---------- */
+[class*="ControlContainer"] {
+  margin-bottom: 22px !important;
+  background: #fff !important;
+  border: 1px solid var(--pdx-borda) !important;
+  border-radius: 14px !important;
+  padding: 16px 18px 18px !important;
+  box-shadow: 0 1px 3px rgba(58,20,112,.05) !important;
+}
+[class*="ControlContainer"]:focus-within {
+  border-color: var(--pdx-roxo) !important;
+  box-shadow: 0 4px 18px rgba(131,56,236,.14) !important;
+}
+
+/* ---------- rótulos ---------- */
+[class*="FieldLabel"], label {
+  text-transform: none !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  color: var(--pdx-noite) !important;
+  background: transparent !important;
+  padding: 0 0 8px !important;
+  position: static !important;
+}
+
+/* ---------- campos de digitação ---------- */
+input[type="text"], input[type="url"], input[type="email"],
+input[type="number"], input[type="date"], textarea, select,
+[class*="ControlContainer"] [contenteditable="true"] {
+  border: 1.5px solid var(--pdx-borda) !important;
+  border-radius: 10px !important;
+  padding: 12px 14px !important;
+  font-size: 15px !important;
+  background: #fff !important;
+  color: #241042 !important;
+  transition: border-color .2s, box-shadow .2s !important;
+  box-shadow: none !important;
+}
+input:focus, textarea:focus, select:focus,
+[class*="ControlContainer"] [contenteditable="true"]:focus {
+  outline: 0 !important;
+  border-color: var(--pdx-roxo) !important;
+  box-shadow: 0 0 0 3px rgba(131,56,236,.16) !important;
+}
+textarea { min-height: 130px !important; line-height: 1.55 !important; }
+
+/* ---------- dicas ---------- */
+[class*="FieldHint"], [class*="hint"] {
+  font-size: 13px !important; color: #6B5B8A !important;
+  margin-top: 6px !important; font-style: normal !important;
+}
+
+/* ---------- listas e blocos (seções, eventos, grupos...) ---------- */
+[class*="ObjectWidgetTopBar"], [class*="ListItemTopBar"] {
+  background: #F3EEFF !important;
+  border: 1px solid var(--pdx-borda) !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+  font-weight: 600 !important;
+  color: var(--pdx-noite) !important;
+}
+[class*="ObjectWidgetTopBar"]:hover, [class*="ListItemTopBar"]:hover {
+  background: #EBE2FF !important;
+}
+[class*="NestedObjectLabel"], [class*="TopBarButton"] { color: var(--pdx-noite) !important; }
+[class*="SortableList"] > div, [class*="ListControl"] { border: 0 !important; }
+
+/* ---------- botões ---------- */
+button, [class*="Button"] {
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  letter-spacing: .01em !important;
+}
+[class*="ToolbarButton"], [class*="PublishButton"], [class*="SaveButton"] {
+  background: var(--pdx-roxo) !important; color: #fff !important;
+  border: 0 !important; padding: 10px 22px !important;
+  box-shadow: 0 4px 14px rgba(131,56,236,.3) !important;
+}
+[class*="ToolbarButton"]:hover, [class*="PublishButton"]:hover, [class*="SaveButton"]:hover {
+  background: var(--pdx-roxo-esc) !important;
+}
+[class*="AddButton"], button[class*="Add"] {
+  background: var(--pdx-amarelo) !important; color: var(--pdx-noite) !important;
+  border: 0 !important; padding: 10px 18px !important;
+}
+[class*="DeleteButton"], button[class*="Remove"], button[class*="Delete"] {
+  background: #FDE7EF !important; color: #B3003C !important; border: 0 !important;
+}
+
+/* ---------- imagens ---------- */
+[class*="ImageWrapper"], [class*="Image"] img {
+  border-radius: 12px !important;
+  border: 1px solid var(--pdx-borda) !important;
+  background: #fff !important;
+}
+
+/* ---------- barra de ações do editor ---------- */
+[class*="EditorToolbar"], [class*="Toolbar"] {
+  background: #fff !important;
+  border-bottom: 1px solid var(--pdx-borda) !important;
+  box-shadow: 0 1px 8px rgba(58,20,112,.06) !important;
+}
+
+/* ---------- avisos ---------- */
+[class*="ControlErrorsList"] {
+  background: #FDE7EF !important; color: #B3003C !important;
+  border-radius: 8px !important; padding: 8px 12px !important;
+  font-size: 13px !important; list-style: none !important;
+}
+
+/* ---------- respiro geral ---------- */
+[class*="CardsGrid"] { gap: 16px !important; }
+@media (min-width: 900px) {
+  [class*="ControlPaneContainer"] { padding: 26px 30px 60px !important; }
+}

@@ -1,0 +1,316 @@
+# ============================================================
+# Painel de administração do site PDX (Decap CMS)
+# O cliente edita textos, fotos, vídeos, agenda e a ORDEM das
+# seções arrastando os blocos na lista "Seções da página".
+# ============================================================
+
+# Login pelo DecapBridge (e-mail/senha ou conta Google)
+backend:
+  name: git-gateway
+  repo: vitorsalosom/PDX
+  branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/69042591-92a3-449f-bfb4-451578a5781f/pkce
+  auth_token_endpoint: /sites/69042591-92a3-449f-bfb4-451578a5781f/token
+  gateway_url: https://gateway.decapbridge.com
+  # registra quem fez cada alteração no histórico
+  commit_messages:
+    create: Cria {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Atualiza {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Remove {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Envia “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Remove “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Mensagem {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+locale: pt
+
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+site_url: https://pagodedoxando.web.app
+display_url: https://pagodedoxando.web.app
+logo_url: /assets/img/logo-escura.png
+
+collections:
+  - name: site
+    label: "Site PDX"
+    files:
+      - name: eventos
+        label: "📅 Eventos (ingressos)"
+        file: "content/eventos.json"
+        format: json
+        editor:
+          preview: false
+        fields:
+          - name: items
+            label: "Próximos eventos"
+            label_singular: "evento"
+            widget: list
+            required: false
+            summary: "{{fields.data}} — {{fields.titulo}} ({{fields.cidade}})"
+            fields:
+              - { name: titulo, label: "Nome do evento (ex: Caraíva)", widget: string, required: false }
+              - { name: data, label: "Data", widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, required: false }
+              - { name: cidade, label: "Cidade", widget: string, required: false }
+              - { name: local, label: "Local (ex: Casa de Taipa)", widget: string, required: false }
+              - { name: link, label: "Link para comprar ingresso (vazio = Em breve)", widget: string, required: false }
+              - { name: botao, label: "Texto do botão", widget: string, required: false, default: "Quero ser feliz" }
+
+      - name: conteudo
+        label: "Conteúdo do site"
+        file: "content/site.json"
+        format: json
+        editor:
+          preview: false
+        fields:
+
+          - name: config
+            label: "Configurações gerais"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: titulo, label: "Título do site (aba do navegador)", widget: string, required: false }
+              - { name: descricao, label: "Descrição (Google e redes sociais)", widget: text, required: false }
+              - { name: whatsapp, label: "WhatsApp (só números, com DDI: 5573...)", widget: string, required: false }
+              - { name: instagram, label: "Instagram (sem @)", widget: string, required: false }
+              - { name: whatsappTexto, label: "Mensagem pronta do WhatsApp — só o texto, sem link", widget: string, required: false, hint: "Texto que já vem digitado quando a pessoa abre a conversa" }
+              - { name: tagline, label: "Frase do rodapé", widget: string, default: "Seja feliz em Caraíva!", required: false }
+              - { name: tiktok, label: "TikTok (endereço completo)", widget: string, required: false }
+              - { name: spotify, label: "Spotify — link do rodapé", widget: string, required: false }
+              - { name: spotifyPlaylist, label: "Spotify — playlist do botão Ouvir (barra do topo)", widget: string, required: false, hint: "Cole o link da playlist. Vazio esconde o botão." }
+              - { name: contratarTexto, label: "Texto do botão de contratação", widget: string, required: false, default: "Contrate o PDX para o seu evento" }
+              - { name: contratarLink, label: "Link de contratação (WhatsApp)", widget: string, required: false }
+
+          # ---------------------------------------------------
+          # A ORDEM desta lista define a ordem das seções no site.
+          # Arraste os blocos para reordenar. Desligue "Seção ativa"
+          # para esconder uma seção sem apagar o conteúdo.
+          # ---------------------------------------------------
+          - name: sections
+            label: "Seções da página (arraste para reordenar)"
+            label_singular: "seção"
+            widget: list
+            collapsed: true
+            types:
+
+              - name: hero
+                label: "1. Abertura — vídeo do topo"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Início", required: false }
+                  - { name: titulo, label: "Frase principal", widget: string, required: false }
+                  - { name: subtitulo, label: "Frase secundária", widget: string, required: false }
+                  - { name: botaoPrimario, label: "Texto do botão", widget: string, default: "Ver agenda", required: false }
+                  - { name: botaoLink, label: "Link do botão", widget: string, required: false, default: "#edicoes" }
+                  - { name: videoYoutube, widget: hidden }
+                  - { name: videoInicio, widget: hidden }
+                  - { name: videoFim, widget: hidden }
+                  - { name: video, label: "Vídeo do topo — computador", widget: file, required: false, choose_url: false }
+                  - { name: videoMobile, label: "Vídeo do topo — celular (vertical)", widget: file, required: false, choose_url: false }
+                  - { name: videoPoster, label: "Imagem que aparece enquanto o vídeo carrega", widget: image, required: false, choose_url: false }
+                  - { name: videoPosterMobile, widget: hidden }
+
+              - name: headline
+                label: "2. Frase de apresentação"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu (deixe vazio para não aparecer)", widget: string, required: false }
+                  - { name: titulo, label: "Frase de destaque", widget: string, required: false }
+                  - { name: texto, label: "Texto (parágrafos separados por linha em branco)", widget: text, required: false }
+
+              - name: edicoes
+                label: "3. Ingressos — próximos eventos"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Edições", required: false }
+                  - { name: titulo, label: "Título (exibido na seção)", widget: string, default: "Vem ser feliz no PDX!", required: false }
+                  - { name: subtitulo, label: "Subtítulo", widget: string, required: false }
+
+              - name: sobre
+                label: "4. Nossa história"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Sobre", required: false }
+                  - { name: titulo, label: "Título", widget: string, required: false }
+                  - { name: texto, label: "Texto (parágrafos separados por linha em branco)", widget: text, required: false }
+                  - { name: foto, label: "Foto ao lado do texto", widget: image, required: false, choose_url: false }
+                  - name: stats
+                    label: "Números"
+                    label_singular: "número"
+                    widget: list
+                    summary: "{{fields.numero}}{{fields.sufixo}} {{fields.label}}"
+                    fields:
+                      - { name: numero, label: "Número", widget: number, required: false }
+                      - { name: sufixo, label: "Sufixo (ex: +, mil+)", widget: string, required: false, default: "" }
+                      - { name: label, label: "Descrição", widget: string, required: false }
+
+              - name: caraiva
+                label: "5. Caraíva — hospedagem e transfer"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Vc feliz em Caraíva", required: false }
+                  - { name: titulo, label: "Título", widget: string, required: false }
+                  - { name: subtitulo, label: "Subtítulo", widget: string, required: false }
+                  - { name: texto, label: "Texto de abertura", widget: text, required: false }
+                  - name: blocos
+                    label: "Blocos (hospedagem, transfer...)"
+                    label_singular: "bloco"
+                    widget: list
+                    summary: "{{fields.titulo}}"
+                    fields:
+                      - { name: titulo, label: "Título do bloco", widget: string, required: false }
+                      - { name: texto, label: "Texto", widget: text, required: false }
+                      - { name: fotos, label: "Fotos", widget: list, required: false, field: { name: foto, label: "Foto", widget: image, choose_url: false } }
+                      - { name: itens, label: "Itens da lista", widget: list, required: false, field: { name: item, label: "Item", widget: string } }
+                      - name: botoes
+                        label: "Botões do bloco"
+                        label_singular: "botão"
+                        widget: list
+                        required: false
+                        summary: "{{fields.texto}}"
+                        fields:
+                          - { name: texto, label: "Texto do botão (ex: Falar com Armando)", widget: string, required: false }
+                          - { name: link, label: "Link do botão (WhatsApp)", widget: string, required: false }
+
+              - name: comunidade
+                label: "6. Comunidade — grupos de WhatsApp"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Comunidade", required: false }
+                  - { name: titulo, label: "Título", widget: string, default: "Comunidade PDX", required: false }
+                  - { name: subtitulo, label: "Subtítulo", widget: string, required: false }
+                  - { name: mosaico, label: "Imagem de fundo (mosaico)", widget: image, required: false, choose_url: false }
+                  - name: grupos
+                    label: "Grupos"
+                    label_singular: "grupo"
+                    widget: list
+                    summary: "{{fields.nome}}"
+                    fields:
+                      - { name: nome, label: "Nome do grupo", widget: string, required: false }
+                      - { name: link, label: "Link do grupo de WhatsApp", widget: string, hint: "Ex: https://chat.whatsapp.com/XXXXXXXX", required: false }
+
+              - name: lojinha
+                label: "7. Lojinha PDX"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: false, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Lojinha", required: false }
+                  - { name: titulo, label: "Título", widget: string, required: false }
+                  - { name: subtitulo, label: "Subtítulo", widget: string, required: false }
+                  - { name: texto, label: "Texto", widget: text, required: false }
+                  - { name: fotos, label: "Fotos dos produtos", widget: list, required: false, field: { name: foto, label: "Foto", widget: image, choose_url: false } }
+                  - { name: botao, label: "Texto do botão", widget: string, required: false }
+                  - { name: botaoLink, label: "Link do botão", widget: string, required: false }
+
+              - name: galeria
+                label: "8. Fotos e álbuns"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Galeria", required: false }
+                  - { name: titulo, label: "Título", widget: string, required: false }
+                  - { name: subtitulo, label: "Subtítulo", widget: string, required: false }
+                  - name: variante
+                    label: "Estilo da galeria"
+                    widget: select
+                    default: carrossel3d
+                    options:
+                      - { label: "Carrossel 3D (gira)", value: carrossel3d }
+                      - { label: "Mosaico", value: mosaico }
+                      - { label: "Grade", value: grade }
+                  - { name: botaoAlbuns, label: "Botão dos álbuns — texto", widget: string, required: false, default: "Mais clicks PDX" }
+                  - { name: tituloAlbuns, label: "Botão dos álbuns — título da janela", widget: string, required: false, default: "Mais clicks PDX" }
+                  - { name: subtituloAlbuns, label: "Botão dos álbuns — subtítulo da janela", widget: string, required: false }
+                  - name: albuns
+                    label: "Botão dos álbuns — lista de links"
+                    label_singular: "álbum"
+                    widget: list
+                    summary: "{{fields.nome}}"
+                    required: false
+                    fields:
+                      - { name: nome, label: "Nome do álbum", widget: string, required: false }
+                      - { name: link, label: "Endereço do álbum", widget: string, required: false }
+                  - name: fotos
+                    label: "Fotos"
+                    label_singular: "foto"
+                    widget: list
+                    collapsed: true
+                    summary: "{{fields.legenda}}"
+                    fields:
+                      - { name: img, label: "Foto", widget: image, required: false, choose_url: false }
+                      - { name: legenda, label: "Legenda", widget: string, required: false }
+
+              - name: depoimentos
+                label: "9. Depoimentos"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Depoimentos", required: false }
+                  - { name: titulo, label: "Título", widget: string, required: false }
+                  - { name: subtitulo, label: "Subtítulo", widget: string, required: false }
+                  - name: itens
+                    label: "Depoimentos"
+                    label_singular: "depoimento"
+                    widget: list
+                    summary: "{{fields.autor}}"
+                    fields:
+                      - { name: autor, label: "Nome de quem escreveu", widget: string, required: false }
+                      - { name: texto, label: "Depoimento", widget: text, required: false }
+
+              - name: videos
+                label: "10. Vídeos do YouTube"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Vídeos", required: false }
+                  - { name: titulo, label: "Título", widget: string, required: false }
+                  - { name: subtitulo, label: "Subtítulo", widget: string, required: false }
+                  - name: videos
+                    label: "Vídeos (cole o link do YouTube)"
+                    label_singular: "vídeo"
+                    widget: list
+                    fields:
+                      - { name: titulo, label: "Título", widget: string, required: false }
+                      - { name: youtube, label: "Link do YouTube", widget: string, hint: "Ex: https://youtu.be/XXXXXXXXXXX — se vazio, o vídeo não aparece", required: false }
+
+              - name: contato
+                label: "11. Contato"
+                widget: object
+                fields:
+                  - { name: enabled, label: "Seção ativa", widget: boolean, default: true, required: false }
+                  - { name: corFundo, label: "Cor de fundo da seção (vazio = cor padrão)", widget: color, required: false, allowInput: true }
+                  - { name: menuLabel, label: "Nome no menu", widget: string, default: "Contato", required: false }
+                  - { name: titulo, label: "Título", widget: string, required: false }
+                  - { name: texto, label: "Texto", widget: text, required: false }
+                  - name: links
+                    label: "Links extras (avaliação, comissário, hospedagem, doação...)"
+                    label_singular: "link"
+                    widget: list
+                    summary: "{{fields.nome}}"
+                    required: false
+                    fields:
+                      - { name: nome, label: "Texto do link", widget: string, required: false }
+                      - { name: link, label: "Endereço", widget: string, required: false }
