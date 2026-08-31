@@ -88,11 +88,13 @@ window.PDX_CONTENT = {
           "texto": "Sua experiência feliz começa na sua hospedagem. Vem se hospedar na pousada do Luquinhas e do Tuba e comece a ser feliz desde o momento da sua chegada em Caraíva.",
           "fotos": [],
           "itens": [
-            "Capacidade: até 6 pessoas",
+            "Suítes de 2 a 4 pessoas",
             "Ar-condicionado",
             "Chuveiro elétrico",
             "Localização: Aldeia Xandó",
-            "Tipo: pousada"
+            "Tipo: pousada",
+            "Piscina",
+            "Cozinha 100% Equipada"
           ],
           "botoes": [
             {
@@ -462,6 +464,30 @@ window.PDX_EVENTOS = {
       "data": "2026-12-27",
       "cidade": "Caraíva - BA",
       "link": "https://www.ingresse.com/verao-pdx-no-coco-27"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-2608",
+      "local": "Casa de Taipa",
+      "cidade": "Caraíva - BA",
+      "data": "2026-08-26",
+      "titulo": "Caraíva - BA"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "data": "2026-09-02",
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-0209",
+      "cidade": "Caraíva - BA",
+      "titulo": "Caraíva - BA"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "data": "2026-09-09",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-0909",
+      "local": "Casa de Taipa",
+      "cidade": "Caraíva - BA",
+      "titulo": "Caraíva - BA"
     }
   ]
 };

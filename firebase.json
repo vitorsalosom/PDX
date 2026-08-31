@@ -11,7 +11,9 @@
       "GUIA-DO-ADMIN.md",
       "PUBLICAR-SITE.bat",
       "limpar-fotos-sem-uso.js",
-      "netlify.toml"
+      "netlify.toml",
+      "conferir-conteudo.js",
+      "gerar-fallback.js"
     ],
     "headers": [
       {
