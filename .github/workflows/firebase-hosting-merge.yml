@@ -1,0 +1,32 @@
+# Publicacao automatica do site PDX.
+# Roda sozinho toda vez que algo e salvo no painel /admin (ou aqui no GitHub).
+name: Publicar site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Conferir se o conteudo esta integro
+        run: node conferir-conteudo.js
+
+      - name: Regenerar copia de seguranca do conteudo
+        run: node gerar-fallback.js
+
+      - name: Remover fotos sem uso
+        run: node limpar-fotos-sem-uso.js
+
+      - name: Publicar no Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PAGODE_DO_XANDO }}
+          channelId: live
+          projectId: pagode-do-xando
