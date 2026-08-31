@@ -18,8 +18,9 @@ Tudo o que aparece no site está em **Conteúdo do site**. Dentro dele há duas 
 
 Depois de qualquer alteração, clique em **Save** (salvar) no topo da tela.
 
-> **Importante:** salvar não coloca no ar imediatamente. Avise o Vitor que você
-> atualizou, e ele publica. Costuma levar poucos minutos.
+> **Importante:** depois de salvar, o site se atualiza sozinho em **1 a 2 minutos**.
+> Não precisa avisar ninguém. Se não aparecer, atualize a página do site segurando
+> `Ctrl` e apertando `F5` — às vezes é só o navegador mostrando a versão antiga.
 
 ## Tarefas do dia a dia
 
