@@ -210,6 +210,50 @@
     });
   }
 
+  /* ---------- vídeo do topo: garante que ele role no celular ----------
+     Alguns aparelhos bloqueiam o autoplay: iPhone em Modo de Pouca Energia,
+     Android com economia de dados, ou navegador que só libera vídeo depois
+     que a pessoa toca na tela. Nesses casos o poster continua aparecendo
+     (o topo nunca fica preto) e nós tentamos de novo no primeiro toque,
+     clique ou rolagem. */
+  function garantirVideo(v) {
+    if (!v) return;
+    v.muted = true;                 /* alguns navegadores exigem por código */
+    v.setAttribute('muted', '');
+    v.playsInline = true;
+
+    var pronto = false;
+    function tentar() {
+      if (pronto) return;
+      var p = v.play();
+      if (p && typeof p.catch === 'function') {
+        p.then(function () { pronto = true; desligar(); })
+         .catch(function () { /* segue com o poster e espera um gesto */ });
+      } else {
+        pronto = true;
+        desligar();
+      }
+    }
+    var eventos = ['touchstart', 'pointerdown', 'click', 'keydown', 'scroll'];
+    function desligar() {
+      eventos.forEach(function (nome) {
+        document.removeEventListener(nome, tentar, true);
+      });
+      document.removeEventListener('visibilitychange', aoVoltar);
+    }
+    function aoVoltar() { if (!document.hidden) tentar(); }
+
+    eventos.forEach(function (nome) {
+      document.addEventListener(nome, tentar, { capture: true, passive: true });
+    });
+    document.addEventListener('visibilitychange', aoVoltar);
+
+    /* se o arquivo falhar de vez, deixa só o poster no lugar do vídeo */
+    v.addEventListener('error', desligar);
+    v.addEventListener('loadeddata', tentar);
+    setTimeout(tentar, 0);
+  }
+
   /* ---------- renderizadores por tipo de seção ---------- */
   var render = {
 
@@ -236,7 +280,8 @@
         var estreito = window.matchMedia && window.matchMedia('(max-width: 700px)').matches;
         var arquivo = (estreito && s.videoMobile) ? s.videoMobile : s.video;
         var capa = (estreito && s.videoPosterMobile) ? s.videoPosterMobile : s.videoPoster;
-        videoHtml = '<video class="hero__video" autoplay muted loop playsinline preload="auto"' +
+        videoHtml = '<video class="hero__video" autoplay muted loop playsinline ' +
+          'webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto"' +
           (capa ? ' poster="' + esc(capa) + '"' : '') +
           '><source src="' + esc(arquivo) + '" type="video/mp4"></video>' +
           '<div class="hero__overlay"></div>';
@@ -256,6 +301,7 @@
           '<a class="hero__scroll" href="#edicoes" aria-hidden="true">&#8964;</a>' +
         '</section>'
       );
+      garantirVideo(node.querySelector('.hero__video'));
       return node;
     },
 
