@@ -65,6 +65,12 @@
       "cidade": "São Paulo - SP",
       "local": "Hangar Campo de Marte",
       "link": "Em breve"
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "Rio de Janeiro",
+      "data": "2026-10-17",
+      "cidade": "Rio de Janeiro - RJ"
     }
   ]
 }
