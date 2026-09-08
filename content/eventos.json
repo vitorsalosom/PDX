@@ -60,10 +60,11 @@
     },
     {
       "botao": "Em breve",
+      "titulo": "São Paulo",
       "data": "2026-11-07",
-      "cidade": "São Paulo",
-      "link": "Em breve",
-      "titulo": "São Paulo"
+      "cidade": "São Paulo - SP",
+      "local": "Hangar Campo de Marte",
+      "link": "Em breve"
     }
   ]
 }
