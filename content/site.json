@@ -248,10 +248,6 @@
       ],
       "fotos": [
         {
-          "img": "/assets/img/gallery/full/pdx-01.webp",
-          "legenda": "Estrutura PDX"
-        },
-        {
           "img": "/assets/img/gallery/full/pdx-03.webp",
           "legenda": "Painel Pagode do Xandó"
         },
@@ -312,7 +308,7 @@
           "legenda": "Festa em Caraíva"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-34.webp",
+          "img": "/assets/img/uploads/0131184439.jpg",
           "legenda": "Amigas do PDX"
         },
         {
