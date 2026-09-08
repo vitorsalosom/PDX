@@ -57,6 +57,13 @@
       "local": "Casa de Taipa",
       "cidade": "Caraíva - BA",
       "titulo": "Caraíva - BA"
+    },
+    {
+      "botao": "Em breve",
+      "data": "2026-10-17",
+      "cidade": "Rio de Janeiro",
+      "link": "Em breve",
+      "titulo": "PDX Rio de Janeiro"
     }
   ]
 }
