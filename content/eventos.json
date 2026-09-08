@@ -71,6 +71,13 @@
       "titulo": "Rio de Janeiro",
       "data": "2026-10-17",
       "cidade": "Rio de Janeiro - RJ"
+    },
+    {
+      "botao": "Em breve ",
+      "titulo": "Vitória ",
+      "data": "2026-11-14",
+      "cidade": "Vitória - ES",
+      "local": "Na Vista"
     }
   ]
 }
