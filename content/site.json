@@ -322,6 +322,10 @@
         {
           "img": "/assets/img/gallery/full/pdx-39.webp",
           "legenda": "Time PDX"
+        },
+        {
+          "img": "/assets/img/uploads/0131231720.jpg",
+          "legenda": "Gui"
         }
       ],
       "menuLabel": "Fotos",
