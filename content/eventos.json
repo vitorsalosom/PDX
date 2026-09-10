@@ -78,6 +78,14 @@
       "data": "2026-11-14",
       "cidade": "Vitória - ES",
       "local": "Na Vista"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "titulo": "Caraíva",
+      "data": "2026-09-12",
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-1209",
+      "cidade": "Caraíva - BA"
     }
   ]
 }
