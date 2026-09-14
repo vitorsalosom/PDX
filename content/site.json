@@ -148,6 +148,10 @@
           "link": "https://chat.whatsapp.com/HTAUiV2iVuM4f1d1M1GLTs"
         },
         {
+          "nome": "PDX RJ",
+          "link": "https://chat.whatsapp.com/INKOuEd8buF8NWI2oFXRud"
+        },
+        {
           "nome": "PDX São Paulo",
           "link": "https://chat.whatsapp.com/FtsIrx5c5V7KufWVT59V0c"
         },
@@ -156,20 +160,16 @@
           "link": "https://chat.whatsapp.com/Lc2CaxMw4Bn0TwJOMrLLMG"
         },
         {
-          "nome": "PDX Salvador",
-          "link": "https://chat.whatsapp.com/IHCbGqSFOA76R0wDUm4cP4"
+          "nome": "PDX Vitória",
+          "link": "https://chat.whatsapp.com/EoPzI1Bec5O7CXb3vne52U"
         },
         {
           "nome": "PDX Belo Horizonte",
           "link": "https://chat.whatsapp.com/Gwhuo3MzbXeGa6uL2xMs0N"
         },
         {
-          "nome": "PDX Vitória",
-          "link": "https://chat.whatsapp.com/EoPzI1Bec5O7CXb3vne52U"
-        },
-        {
-          "nome": "PDX RJ",
-          "link": "https://chat.whatsapp.com/INKOuEd8buF8NWI2oFXRud"
+          "nome": "PDX Salvador",
+          "link": "https://chat.whatsapp.com/IHCbGqSFOA76R0wDUm4cP4"
         }
       ],
       "mosaico": "/assets/img/mosaico-comunidade.jpg"
