@@ -565,10 +565,15 @@ a { color: inherit; }
 .cal { margin-top: 10px; }
 
 .cal__topo {
-  display: grid; grid-template-columns: 42px 1fr 42px; align-items: center;
-  gap: 8px; margin-bottom: 10px;
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; margin-bottom: 10px;
 }
-.cal__mesano { text-align: center; line-height: 1; }
+/* largura fixa no bloco do mês: as setas ficam coladas nele, mas param
+   sempre no mesmo lugar em vez de pular a cada troca de mês */
+.cal__mesano {
+  text-align: center; line-height: 1;
+  flex: 0 0 auto; width: min(230px, 54vw);
+}
 .cal__mes {
   display: block; font-family: var(--f-display); letter-spacing: .04em;
   font-size: clamp(23px, 4.7vw, 32px); color: var(--roxo);
