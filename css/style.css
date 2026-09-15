@@ -559,11 +559,11 @@ a { color: inherit; }
   background-size: 34px 9px; background-repeat: repeat-x;
   opacity: .28; pointer-events: none;
 }
-.cal { margin-top: 20px; }
+.cal { margin-top: 14px; }
 
 .cal__topo {
   display: grid; grid-template-columns: 46px 1fr 46px; align-items: center;
-  gap: 8px; margin-bottom: 16px;
+  gap: 8px; margin-bottom: 12px;
 }
 .cal__mesano { text-align: center; line-height: 1; }
 .cal__mes {
@@ -590,7 +590,7 @@ a { color: inherit; }
   color: var(--roxo); opacity: .65; text-align: center; margin-bottom: 8px;
 }
 .cal__dia {
-  position: relative; aspect-ratio: 1; border: 0; padding: 0;
+  position: relative; aspect-ratio: 1.15; border: 0; padding: 0;
   display: flex; align-items: center; justify-content: center;
   border-radius: 13px; background: rgba(131, 56, 236, .06);
   font-family: var(--f-manuscrita); font-size: clamp(15px, 3.4vw, 19px);
