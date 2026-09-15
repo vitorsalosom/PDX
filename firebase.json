@@ -2,6 +2,10 @@
   "hosting": {
     "site": "pagodedoxando",
     "public": ".",
+    "predeploy": [
+      "node conferir-atualizado.js",
+      "node conferir-conteudo.js"
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -13,7 +17,8 @@
       "limpar-fotos-sem-uso.js",
       "netlify.toml",
       "conferir-conteudo.js",
-      "gerar-fallback.js"
+      "gerar-fallback.js",
+      "conferir-atualizado.js"
     ],
     "headers": [
       {
@@ -44,7 +49,7 @@
         ]
       },
       {
-        "source": "content/site.json",
+        "source": "content/*.json",
         "headers": [
           {
             "key": "Cache-Control",

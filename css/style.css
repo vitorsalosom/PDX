@@ -428,6 +428,9 @@ a { color: inherit; }
 }
 .webdoor__lista {
   display: grid; gap: 26px;
+  /* largura vinda do trilho, não do conteúdo: sem isso, com UM único evento
+     o card não tem contra quem medir os 25% e encolhe para uma tira fina */
+  flex: 1 1 auto; width: 100%; min-width: 0;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% - 3 * 26px) / 4);
   align-items: stretch;

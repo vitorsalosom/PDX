@@ -661,16 +661,21 @@
     });
     if (!comData.length && !semData.length) return;
 
-    /* o calendário começa no mês do primeiro evento e vai até o do último,
-       assim nunca abre numa página vazia */
-    var primeiro = comData.length ? comData[0].d : new Date();
+    /* o calendário vai do mês corrente até o mês do último evento, e ABRE no
+       mês do próximo evento — assim nunca aparece numa página vazia, mas
+       continua dando para voltar até hoje em vez de ficar preso lá na frente */
+    var agora = new Date();
+    var primeiro = comData.length ? comData[0].d : agora;
     var ultimo = comData.length ? comData[comData.length - 1].d : primeiro;
-    var anoAtual = primeiro.getFullYear(), mesAtual = primeiro.getMonth();
-    var totalMeses = comData.length
-      ? (ultimo.getFullYear() - primeiro.getFullYear()) * 12 +
-        (ultimo.getMonth() - primeiro.getMonth())
-      : 0;
-    var passo = 0;
+    var anoAtual = agora.getFullYear(), mesAtual = agora.getMonth();
+    if (primeiro < new Date(anoAtual, mesAtual, 1)) {
+      anoAtual = primeiro.getFullYear(); mesAtual = primeiro.getMonth();
+    }
+    function distanciaEmMeses(d) {
+      return (d.getFullYear() - anoAtual) * 12 + (d.getMonth() - mesAtual);
+    }
+    var totalMeses = Math.max(0, distanciaEmMeses(ultimo));
+    var passo = comData.length ? Math.max(0, distanciaEmMeses(primeiro)) : 0;
     var selecionado = comData.length ? comData[0].chave : '';
 
     var emBreve = semData.length
