@@ -11,6 +11,7 @@
   var ICON_INSTA = '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>';
   var ICON_ZAP = '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
 
+  var ICON_PIN = '<svg class="cal__pin" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>';
   var ICON_TIKTOK = '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0115.54 3h-3.09v12.4a2.59 2.59 0 01-2.59 2.5 2.59 2.59 0 01-2.59-2.59 2.59 2.59 0 013.42-2.45V9.72a5.69 5.69 0 00-.83-.06A5.69 5.69 0 004.17 15.3 5.69 5.69 0 009.86 21a5.69 5.69 0 005.69-5.69V8.83a7.35 7.35 0 004.3 1.38V7.12a4.29 4.29 0 01-3.25-1.3z"/></svg>';
   var ICON_SPOTIFY = '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.28c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.28 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.14-1.26 11.16-1.02 15.54 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.5.24z"/></svg>';
 
@@ -535,7 +536,13 @@
           '<button class="webdoor__seta webdoor__seta--prev" aria-label="Eventos anteriores">&#8249;</button>' +
           '<div class="webdoor__lista">' + lista + '</div>' +
           '<button class="webdoor__seta webdoor__seta--next" aria-label="Próximos eventos">&#8250;</button>' +
+        '</div>' +
+        '<div class="webdoor__mais reveal">' +
+          '<button class="btn btn--roxo webdoor__calendario" type="button">Ver no calendário</button>' +
         '</div></section>');
+      node.querySelector('.webdoor__calendario').addEventListener('click', function () {
+        abrirCalendario(itens, s.titulo);
+      });
       initCarrossel(node);
       return node;
     },
@@ -621,6 +628,178 @@
     box.addEventListener('click', function (e) { if (e.target === box) fechar(); });
     document.addEventListener('keydown', aoTeclar);
 
+    document.body.appendChild(box);
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(function () { box.classList.add('modal--aberto'); });
+  }
+
+  /* ---------- calendário de parede das edições ---------- */
+  var DIAS_SEMANA = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
+  var MESES_LONGOS = ['JANEIRO', 'FEVEREIRO', 'MARCO', 'ABRIL', 'MAIO', 'JUNHO',
+    'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'];
+
+  function chaveDia(d) {
+    return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) +
+      '-' + ('0' + d.getDate()).slice(-2);
+  }
+
+  function abrirCalendario(itens, titulo) {
+    var antigo = document.getElementById('modal-calendario');
+    if (antigo) antigo.remove();
+
+    /* separa o que tem data marcada do que ainda está "em breve" */
+    var comData = [], semData = [], porDia = {};
+    itens.forEach(function (it) {
+      var d = it.data ? new Date(it.data + 'T12:00:00') : null;
+      if (d && !isNaN(d)) {
+        var k = chaveDia(d);
+        comData.push({ it: it, d: d, chave: k });
+        (porDia[k] = porDia[k] || []).push(it);
+      } else {
+        semData.push(it);
+      }
+    });
+    if (!comData.length && !semData.length) return;
+
+    /* o calendário começa no mês do primeiro evento e vai até o do último,
+       assim nunca abre numa página vazia */
+    var primeiro = comData.length ? comData[0].d : new Date();
+    var ultimo = comData.length ? comData[comData.length - 1].d : primeiro;
+    var anoAtual = primeiro.getFullYear(), mesAtual = primeiro.getMonth();
+    var totalMeses = comData.length
+      ? (ultimo.getFullYear() - primeiro.getFullYear()) * 12 +
+        (ultimo.getMonth() - primeiro.getMonth())
+      : 0;
+    var passo = 0;
+    var selecionado = comData.length ? comData[0].chave : '';
+
+    var emBreve = semData.length
+      ? '<div class="cal__embreve"><span class="cal__embreve-rot">Sem data definida</span>' +
+        semData.map(function (it) {
+          return '<span class="cal__embreve-item">' + esc(it.titulo) +
+            (it.cidade ? ' · ' + esc(it.cidade) : '') + '</span>';
+        }).join('') + '</div>'
+      : '';
+
+    var box = el('<div id="modal-calendario" class="modal modal--cal" role="dialog" aria-modal="true" aria-label="' + esc(titulo || 'Calendário de edições') + '">' +
+      '<div class="modal__caixa modal__caixa--cal">' +
+        '<button class="modal__fechar" aria-label="Fechar">&times;</button>' +
+        '<div class="cal">' +
+          '<div class="cal__topo">' +
+            '<button class="cal__nav cal__nav--prev" aria-label="Mês anterior">&#8249;</button>' +
+            '<div class="cal__mesano"><span class="cal__mes"></span><span class="cal__ano"></span></div>' +
+            '<button class="cal__nav cal__nav--next" aria-label="Próximo mês">&#8250;</button>' +
+          '</div>' +
+          '<div class="cal__semana">' + DIAS_SEMANA.map(function (n) {
+            return '<span>' + n + '</span>';
+          }).join('') + '</div>' +
+          '<div class="cal__grade"></div>' +
+          '<div class="cal__detalhe" aria-live="polite"></div>' +
+          emBreve +
+        '</div>' +
+      '</div></div>');
+
+    var elMes = box.querySelector('.cal__mes');
+    var elAno = box.querySelector('.cal__ano');
+    var elGrade = box.querySelector('.cal__grade');
+    var elDet = box.querySelector('.cal__detalhe');
+    var btPrev = box.querySelector('.cal__nav--prev');
+    var btNext = box.querySelector('.cal__nav--next');
+
+    function mesVisivel() {
+      var d = new Date(anoAtual, mesAtual + passo, 1);
+      return { ano: d.getFullYear(), mes: d.getMonth() };
+    }
+
+    function desenharDetalhe() {
+      var lista = porDia[selecionado] || [];
+      if (!lista.length) {
+        elDet.innerHTML = '<p class="cal__vazio">Toque num dia marcado para ver o local.</p>';
+        return;
+      }
+      var d = new Date(selecionado + 'T12:00:00');
+      elDet.innerHTML = lista.map(function (it) {
+        var acao = it.link
+          ? '<a class="btn btn--pink cal__btn" href="' + esc(it.link) + '" target="_blank" rel="noopener">' +
+            esc(it.botao || 'Quero ser feliz') + '</a>'
+          : '<span class="btn btn--embreve cal__btn">' + esc(it.botao || 'Em breve') + '</span>';
+        return '<article class="cal__card">' +
+          '<div class="cal__card-data">' +
+            '<span class="cal__card-dia">' + d.getDate() + '</span>' +
+            '<span class="cal__card-mes">' + MESES[d.getMonth()] + '</span>' +
+            '<span class="cal__card-sem">' + DIAS_SEMANA[d.getDay()] + '</span>' +
+          '</div>' +
+          '<div class="cal__card-info">' +
+            '<h4 class="cal__card-titulo">' + esc(it.titulo) + '</h4>' +
+            (it.cidade ? '<p class="cal__card-cidade">' + esc(it.cidade) + '</p>' : '') +
+            (it.local ? '<p class="cal__card-local">' + ICON_PIN + esc(it.local) + '</p>' : '') +
+          '</div>' + acao +
+        '</article>';
+      }).join('');
+    }
+
+    function desenhar() {
+      var v = mesVisivel();
+      elMes.textContent = MESES_LONGOS[v.mes];
+      elAno.textContent = v.ano;
+      btPrev.disabled = passo <= 0;
+      btNext.disabled = passo >= totalMeses;
+
+      var primeiroDia = new Date(v.ano, v.mes, 1).getDay();
+      var diasNoMes = new Date(v.ano, v.mes + 1, 0).getDate();
+      var hoje = chaveDia(new Date());
+      var celulas = '';
+      for (var i = 0; i < primeiroDia; i++) {
+        celulas += '<span class="cal__dia cal__dia--fora" aria-hidden="true"></span>';
+      }
+      for (var dia = 1; dia <= diasNoMes; dia++) {
+        var k = v.ano + '-' + ('0' + (v.mes + 1)).slice(-2) + '-' + ('0' + dia).slice(-2);
+        var tem = !!porDia[k];
+        var classes = 'cal__dia' + (tem ? ' cal__dia--tem' : '') +
+          (k === hoje ? ' cal__dia--hoje' : '') +
+          (tem && k === selecionado ? ' cal__dia--ativo' : '');
+        if (tem) {
+          var quantos = porDia[k].length;
+          celulas += '<button class="' + classes + '" data-dia="' + k + '" ' +
+            'aria-label="' + esc(porDia[k][0].titulo) + ' em ' + dia + ' de ' +
+            MESES_LONGOS[v.mes].toLowerCase() + '">' +
+            '<span class="cal__num">' + dia + '</span>' +
+            '<span class="cal__marca" aria-hidden="true">' +
+            (quantos > 1 ? quantos : '') + '</span></button>';
+        } else {
+          celulas += '<span class="' + classes + '"><span class="cal__num">' + dia + '</span></span>';
+        }
+      }
+      elGrade.innerHTML = celulas;
+      desenharDetalhe();
+    }
+
+    elGrade.addEventListener('click', function (e) {
+      var bt = e.target.closest('.cal__dia--tem');
+      if (!bt) return;
+      selecionado = bt.getAttribute('data-dia');
+      desenhar();
+    });
+    btPrev.addEventListener('click', function () { if (passo > 0) { passo--; desenhar(); } });
+    btNext.addEventListener('click', function () { if (passo < totalMeses) { passo++; desenhar(); } });
+
+    function fechar() {
+      box.classList.remove('modal--aberto');
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', aoTeclar);
+      setTimeout(function () { box.remove(); }, 300);
+    }
+    function aoTeclar(e) {
+      if (e.key === 'Escape') fechar();
+      else if (e.key === 'ArrowLeft' && passo > 0) { passo--; desenhar(); }
+      else if (e.key === 'ArrowRight' && passo < totalMeses) { passo++; desenhar(); }
+    }
+
+    box.querySelector('.modal__fechar').addEventListener('click', fechar);
+    box.addEventListener('click', function (e) { if (e.target === box) fechar(); });
+    document.addEventListener('keydown', aoTeclar);
+
+    desenhar();
     document.body.appendChild(box);
     document.body.style.overflow = 'hidden';
     requestAnimationFrame(function () { box.classList.add('modal--aberto'); });
