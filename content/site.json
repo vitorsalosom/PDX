@@ -109,10 +109,6 @@
           "itens": [],
           "botoes": [
             {
-              "texto": "Falar com Armando",
-              "link": "https://wa.me/5573999969914?text=Quero%20agendar%20meu%20transfer%20para%20Cara%C3%ADva!%20"
-            },
-            {
               "texto": "Falar com Thiago",
               "link": "https://wa.me/557399398357?text=Quero%20agendar%20meu%20transfer%20para%20Cara%C3%ADva!"
             }
