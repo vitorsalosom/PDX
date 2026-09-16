@@ -148,6 +148,12 @@
       "titulo": "Caraíva",
       "local": "Casa de Taipa",
       "cidade": "Caraíva - BA"
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "Belo Horizonte",
+      "data": "2026-11-28",
+      "cidade": "Belo Horizonte - BH"
     }
   ]
 }
