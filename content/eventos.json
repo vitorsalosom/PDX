@@ -219,6 +219,12 @@
       "data": "2026-11-25",
       "cidade": "Caraíva - BA",
       "local": "Casa de Taipa"
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "Salvador",
+      "data": "2026-12-19",
+      "cidade": "Salvador - BA"
     }
   ]
 }
