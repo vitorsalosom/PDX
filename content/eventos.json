@@ -217,6 +217,14 @@
       "titulo": "Salvador",
       "data": "2026-12-19",
       "cidade": "Salvador - BA"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-2609",
+      "data": "2026-09-26",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa",
+      "titulo": "Caraíva"
     }
   ]
 }
