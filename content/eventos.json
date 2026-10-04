@@ -122,26 +122,28 @@
       "titulo": "Caraíva"
     },
     {
-      "botao": "Em breve",
+      "botao": "Vem ser feliz",
       "titulo": "Caraíva",
       "data": "2026-10-07",
       "local": "Casa de Taipa",
-      "link": "",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-0710",
       "cidade": "Caraíva - BA"
     },
     {
-      "botao": "Em breve",
+      "botao": "Vem ser feliz",
       "data": "2026-10-10",
       "titulo": "Caraíva",
       "local": "Casa de Taipa",
-      "cidade": "Caraíva - BA"
+      "cidade": "Caraíva - BA",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-1010"
     },
     {
-      "botao": "Em breve",
+      "botao": "Vem ser feliz",
       "data": "2026-10-14",
       "titulo": "Caraíva",
       "local": "Casa de Taipa",
-      "cidade": "Caraíva - BA"
+      "cidade": "Caraíva - BA",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-1410"
     },
     {
       "botao": "Em breve",
@@ -150,18 +152,20 @@
       "cidade": "Belo Horizonte - BH"
     },
     {
-      "botao": "Em breve",
+      "botao": "Vem ser feliz",
       "titulo": "Caraíva ",
       "data": "2026-10-21",
       "cidade": "Caraíva - BA",
-      "local": "Casa de Taipa"
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-2110"
     },
     {
-      "botao": "Em breve",
+      "botao": "Vem ser feliz",
       "titulo": "Caraíva",
       "data": "2026-10-24",
       "cidade": "Caraíva - BA",
-      "local": "Casa de Taipa"
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-2410"
     },
     {
       "botao": "Em breve",
