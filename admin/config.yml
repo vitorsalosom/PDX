@@ -78,6 +78,7 @@ collections:
             fields:
               - { name: titulo, label: "Título do site (aba do navegador)", widget: string, required: false }
               - { name: descricao, label: "Descrição (Google e redes sociais)", widget: text, required: false }
+              - { name: imagemCompartilhar, label: "Imagem que aparece ao compartilhar o link", widget: image, required: false, choose_url: false, hint: "Aparece no WhatsApp, Instagram e Facebook quando alguém manda o link do site. Use JPG de 1200 x 630 pixels (formato deitado)." }
               - { name: whatsapp, label: "WhatsApp (só números, com DDI: 5573...)", widget: string, required: false }
               - { name: instagram, label: "Instagram (sem @)", widget: string, required: false }
               - { name: whatsappTexto, label: "Mensagem pronta do WhatsApp — só o texto, sem link", widget: string, required: false, hint: "Texto que já vem digitado quando a pessoa abre a conversa" }

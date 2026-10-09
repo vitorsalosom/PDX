@@ -12,7 +12,8 @@ window.PDX_CONTENT = {
     "spotify": "https://open.spotify.com/playlist/52JWYdovktObpAcvMiVWD2",
     "email": "contato@pagodedoxando.com.br",
     "contratarTexto": "Contrate o PDX para o seu evento",
-    "contratarLink": "https://wa.me/5511992024494?text=Ol%C3%A1%2C%20quero%20contratar%20o%20PDX%20para%20o%20meu%20evento!%20"
+    "contratarLink": "https://wa.me/5511992024494?text=Ol%C3%A1%2C%20quero%20contratar%20o%20PDX%20para%20o%20meu%20evento!%20",
+    "imagemCompartilhar": "/assets/img/compartilhar.jpg"
   },
   "sections": [
     {
@@ -110,10 +111,6 @@ window.PDX_CONTENT = {
           "itens": [],
           "botoes": [
             {
-              "texto": "Falar com Armando",
-              "link": "https://wa.me/5573999969914?text=Quero%20agendar%20meu%20transfer%20para%20Cara%C3%ADva!%20"
-            },
-            {
               "texto": "Falar com Thiago",
               "link": "https://wa.me/557399398357?text=Quero%20agendar%20meu%20transfer%20para%20Cara%C3%ADva!"
             }
@@ -129,12 +126,8 @@ window.PDX_CONTENT = {
       "subtitulo": "Viajar já é bom. Viajar conectado com a galera, melhor ainda. Entre nos grupos e fique por dentro de tudo:",
       "grupos": [
         {
-          "nome": "Caraíva — feriados 2º semestre",
+          "nome": "Caraíva — 2º semestre",
           "link": "https://chat.whatsapp.com/KiByIBy2y5jFY9HFbmxDDi"
-        },
-        {
-          "nome": "Caraíva — feriado 07/09",
-          "link": "https://chat.whatsapp.com/EBJDNsZWUwF6qHNVFn4MEK"
         },
         {
           "nome": "Caraíva — feriado 12/10",
@@ -153,6 +146,10 @@ window.PDX_CONTENT = {
           "link": "https://chat.whatsapp.com/HTAUiV2iVuM4f1d1M1GLTs"
         },
         {
+          "nome": "PDX RJ",
+          "link": "https://chat.whatsapp.com/INKOuEd8buF8NWI2oFXRud"
+        },
+        {
           "nome": "PDX São Paulo",
           "link": "https://chat.whatsapp.com/FtsIrx5c5V7KufWVT59V0c"
         },
@@ -161,16 +158,16 @@ window.PDX_CONTENT = {
           "link": "https://chat.whatsapp.com/Lc2CaxMw4Bn0TwJOMrLLMG"
         },
         {
-          "nome": "PDX Salvador",
-          "link": "https://chat.whatsapp.com/IHCbGqSFOA76R0wDUm4cP4"
+          "nome": "PDX Vitória",
+          "link": "https://chat.whatsapp.com/EoPzI1Bec5O7CXb3vne52U"
         },
         {
           "nome": "PDX Belo Horizonte",
           "link": "https://chat.whatsapp.com/Gwhuo3MzbXeGa6uL2xMs0N"
         },
         {
-          "nome": "PDX Vitória",
-          "link": "https://chat.whatsapp.com/EoPzI1Bec5O7CXb3vne52U"
+          "nome": "PDX Salvador",
+          "link": "https://chat.whatsapp.com/IHCbGqSFOA76R0wDUm4cP4"
         }
       ],
       "mosaico": "/assets/img/mosaico-comunidade.jpg"
@@ -191,6 +188,10 @@ window.PDX_CONTENT = {
       "enabled": true,
       "albuns": [
         {
+          "nome": "PDX Salvador - 18/07/26",
+          "link": "https://drive.google.com/drive/folders/18ay13HrrB-VufkLCsY_PW93PldU-XTRH?usp=drive_link"
+        },
+        {
           "nome": "PDX BH — 13/06/26",
           "link": "https://galerias.olharr.com.br/NT02MwboOj4Cp"
         },
@@ -203,36 +204,16 @@ window.PDX_CONTENT = {
           "link": "https://www.dropbox.com/scl/fo/ere7w9qtq5zzmhgw7clgb/AOGnHUJ6EnfoyM2gnPVmrMU?rlkey=75u5yy88omx56x92i68mygt8x&st=2nv6bmzt&dl=0"
         },
         {
-          "nome": "Carnasal com PDX — 14/02/26",
-          "link": "https://galeria.brunoamianti.com/carnasalcompdx/"
-        },
-        {
           "nome": "PDX SP — 31/01/26",
           "link": "https://pridia.com.br/albuns/pagode-do-xando"
-        },
-        {
-          "nome": "Verão 25/26 — PDX no Clayton e Romário",
-          "link": "https://drive.google.com/drive/folders/1nODG0Dm_d6yVCl09_vMu2pnC_11qDIXC?usp=sharing"
-        },
-        {
-          "nome": "Verão PDX — 28/12",
-          "link": "https://pixies.et/tzsDhpxu"
         },
         {
           "nome": "PDX VIX — 13/12/25",
           "link": "https://drive.google.com/drive/folders/196qGfu5pEdCOO9AaHI9YFe88FcWeCXyh?usp=sharing"
         },
         {
-          "nome": "PDX SP — 18/10/25",
-          "link": "https://pedromafia80.pixieset.com/pdxsaopaulooutubro"
-        },
-        {
           "nome": "São João PDX SP — 05/07/25",
           "link": "https://opedromafia.pixieset.com/saojoaopdxsaopaulo"
-        },
-        {
-          "nome": "PDX Carnaval",
-          "link": "https://galeria.brunoamianti.com/pdx-taipa/"
         },
         {
           "nome": "PDX Carnaval — Arraial",
@@ -241,10 +222,6 @@ window.PDX_CONTENT = {
         {
           "nome": "PDX Carnaval — Carnasal",
           "link": "https://galeria.brunoamianti.com/pdx/"
-        },
-        {
-          "nome": "PDX SP — 15/02/25",
-          "link": "https://agenciakeepyoung.pixieset.com/pdx/"
         },
         {
           "nome": "Verão PDX + 5521 — 05/01/25",
@@ -263,33 +240,25 @@ window.PDX_CONTENT = {
           "link": "https://werneck.art.br/pagodedoxandoveraopdx/"
         },
         {
-          "nome": "PDX SP — 05/10/24",
-          "link": "https://drive.google.com/drive/folders/15IReagVbBLc4GpNuVxshvLrgyhUaYTQs"
-        },
-        {
           "nome": "PDX BH — 31/08/24",
           "link": "https://www.werneck.art.br/pdxcaraivabh/"
         }
       ],
       "fotos": [
         {
-          "img": "/assets/img/gallery/full/pdx-01.webp",
-          "legenda": "Estrutura PDX"
-        },
-        {
-          "img": "/assets/img/gallery/full/pdx-03.webp",
+          "img": "/assets/img/uploads/pridia0411225600.jpg",
           "legenda": "Painel Pagode do Xandó"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-05.webp",
+          "img": "/assets/img/uploads/0201020005.jpg",
           "legenda": "Lustre PDX"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-07.webp",
+          "img": "/assets/img/uploads/0131171334.jpg",
           "legenda": "Copos oficiais"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-10.webp",
+          "img": "/assets/img/uploads/0131225332.jpg",
           "legenda": "A festa"
         },
         {
@@ -297,15 +266,15 @@ window.PDX_CONTENT = {
           "legenda": "Amigos do PDX"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-14.webp",
+          "img": "/assets/img/uploads/pridia0412000820.jpg",
           "legenda": "Alegria"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-16.webp",
+          "img": "/assets/img/uploads/0131232353.jpg",
           "legenda": "Pandeiro na roda"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-18.webp",
+          "img": "/assets/img/uploads/0201010330.jpg",
           "legenda": "A banda"
         },
         {
@@ -321,23 +290,23 @@ window.PDX_CONTENT = {
           "legenda": "Cavaquinho"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-26.webp",
+          "img": "/assets/img/uploads/pridia0411231118.jpg",
           "legenda": "Percussão"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-28.webp",
+          "img": "/assets/img/uploads/pridia0412001158.jpg",
           "legenda": "Público PDX"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-30.webp",
+          "img": "/assets/img/uploads/pridia0411195243.jpg",
           "legenda": "Roda de samba"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-32.webp",
+          "img": "/assets/img/uploads/pridia0411231208.jpg",
           "legenda": "Festa em Caraíva"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-34.webp",
+          "img": "/assets/img/uploads/0131184439.jpg",
           "legenda": "Amigas do PDX"
         },
         {
@@ -345,12 +314,16 @@ window.PDX_CONTENT = {
           "legenda": "O show"
         },
         {
-          "img": "/assets/img/gallery/full/pdx-38.webp",
+          "img": "/assets/img/uploads/0131220115.jpg",
           "legenda": "Emoção"
         },
         {
           "img": "/assets/img/gallery/full/pdx-39.webp",
           "legenda": "Time PDX"
+        },
+        {
+          "img": "/assets/img/uploads/0131231720.jpg",
+          "legenda": "Gui"
         }
       ],
       "menuLabel": "Fotos",
@@ -383,6 +356,10 @@ window.PDX_CONTENT = {
         {
           "autor": "Mari Meyer",
           "texto": "Acompanhar essa trajetória de vocês dá um orgulho danado. Quando conheci o Pagode do Xandó em Caraíva, era impossível assistir a um show sem sentir a energia, a alegria e o talento que transbordavam em cada música. Que esse seja só o começo de uma caminhada gigante."
+        },
+        {
+          "texto": "A bagunça mais falada do Brasil",
+          "autor": "Ianique Costa"
         }
       ]
     },
@@ -451,17 +428,19 @@ window.PDX_EVENTOS = {
       "titulo": "Caraíva",
       "data": "2026-09-05",
       "cidade": "Caraíva - BA",
-      "link": "https://www.ingresse.com/pdx-no-coco"
+      "link": "https://www.ingresse.com/pdx-no-coco",
+      "local": "Coco Brasil"
     },
     {
       "titulo": "Caraíva",
       "data": "2026-09-06",
       "cidade": "Caraíva - BA",
-      "link": "https://zig.tickets/eventos/pagode-do-xando-0609"
+      "link": "https://zig.tickets/eventos/pagode-do-xando-0609",
+      "local": "Casa de Taipa"
     },
     {
-      "titulo": "Verão PDX No Coco",
-      "data": "2026-12-27",
+      "titulo": "Verão PDX Casa Coco",
+      "data": "2026-12-28",
       "cidade": "Caraíva - BA",
       "link": "https://www.ingresse.com/verao-pdx-no-coco-27"
     },
@@ -488,6 +467,75 @@ window.PDX_EVENTOS = {
       "local": "Casa de Taipa",
       "cidade": "Caraíva - BA",
       "titulo": "Caraíva - BA"
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "São Paulo",
+      "data": "2026-11-07",
+      "cidade": "São Paulo - SP",
+      "local": "Bosque Clube Espéria ",
+      "link": ""
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "Rio de Janeiro",
+      "data": "2026-10-17",
+      "cidade": "Rio de Janeiro - RJ"
+    },
+    {
+      "botao": "Em breve ",
+      "titulo": "Vitória ",
+      "data": "2026-11-14",
+      "cidade": "Vitória - ES",
+      "local": "Na Vista"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "titulo": "Caraíva",
+      "data": "2026-09-12",
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-1209",
+      "cidade": "Caraíva - BA"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "titulo": "Caraíva",
+      "data": "2026-09-19",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-1909",
+      "local": "Casa de Taipa",
+      "cidade": "Caraíva - BA"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "data": "2026-09-23",
+      "titulo": "Caraíva",
+      "cidade": "Caraíva - BA",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-2309",
+      "local": "Casa de Taipa"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-1609",
+      "local": "Casa de Taipa",
+      "data": "2026-09-16",
+      "cidade": "Caraíva - BA",
+      "titulo": "Caraíva"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "data": "2026-09-30",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa",
+      "titulo": "Caraíva",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-3009"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "data": "2026-10-03",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pagode-do-xando-0310",
+      "titulo": "Caraíva"
     }
   ]
 };

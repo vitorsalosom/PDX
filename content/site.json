@@ -3,15 +3,16 @@
     "descricao": "O pagode mais feliz do Brasil. Toda quarta e sábado em Caraíva-BA, com edições especiais pelo restante do Brasil.",
     "spotifyPlaylist": "https://open.spotify.com/playlist/52JWYdovktObpAcvMiVWD2",
     "tagline": "Vem ser feliz no PDX!",
-    "whatsappTexto": "https://wa.me/5573936180521?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20PDX!",
-    "whatsapp": "5573936180521",
+    "whatsappTexto": "Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20PDX!",
+    "whatsapp": "5511992024494",
     "instagram": "pdxcaraiva",
     "titulo": "PDX — Pagode do Xandó | Caraíva - BA",
     "tiktok": "https://www.tiktok.com/@pdxcaraiva",
     "spotify": "https://open.spotify.com/playlist/52JWYdovktObpAcvMiVWD2",
     "email": "contato@pagodedoxando.com.br",
     "contratarTexto": "Contrate o PDX para o seu evento",
-    "contratarLink": "https://wa.me/5511992024494?text=Ol%C3%A1%2C%20quero%20contratar%20o%20PDX%20para%20o%20meu%20evento!%20"
+    "contratarLink": "https://wa.me/5511992024494?text=Ol%C3%A1%2C%20quero%20contratar%20o%20PDX%20para%20o%20meu%20evento!%20",
+    "imagemCompartilhar": "/assets/img/compartilhar.jpg"
   },
   "sections": [
     {
@@ -126,6 +127,18 @@
         {
           "nome": "Caraíva — 2º semestre",
           "link": "https://chat.whatsapp.com/KiByIBy2y5jFY9HFbmxDDi"
+        },
+        {
+          "nome": "Caraíva — feriado 12/10",
+          "link": "https://chat.whatsapp.com/KlVKbHctI5TKudKuVUYcjC"
+        },
+        {
+          "nome": "Caraíva — feriado 02/11",
+          "link": "https://chat.whatsapp.com/JyPUkcJt1yhLYX61xUgbHS"
+        },
+        {
+          "nome": "Caraíva — feriado 20/11",
+          "link": "https://chat.whatsapp.com/FSB9waRb4xnBenEJBvf4nL"
         },
         {
           "nome": "Caraíva — Verão 26/27",

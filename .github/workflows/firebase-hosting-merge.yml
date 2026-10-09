@@ -20,6 +20,9 @@ jobs:
       - name: Regenerar copia de seguranca do conteudo
         run: node gerar-fallback.js
 
+      - name: Atualizar o cartao de compartilhamento
+        run: node gerar-meta.js
+
       - name: Remover fotos sem uso
         run: node limpar-fotos-sem-uso.js
 

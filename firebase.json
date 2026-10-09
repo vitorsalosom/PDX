@@ -18,9 +18,19 @@
       "netlify.toml",
       "conferir-conteudo.js",
       "gerar-fallback.js",
-      "conferir-atualizado.js"
+      "conferir-atualizado.js",
+      "gerar-meta.js"
     ],
     "headers": [
+      {
+        "source": "index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
       {
         "source": "assets/**",
         "headers": [
