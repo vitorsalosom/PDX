@@ -28,8 +28,44 @@
   <link rel="preload" href="assets/fonts/Spot-Normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Brasilero2018Free.otf" as="font" type="font/otf" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=4">
+
+  <!-- ====== Medição de anúncios ======================================
+       Google Ads (AW-18472678874) e Pixel da Meta (1131022195911171).
+       O evento de "iniciar compra" NÃO fica aqui: ele é disparado por
+       js/main.js no clique dos botões de ingresso. Se ficasse aqui,
+       contaria uma conversão a cada visita, não a cada intenção de
+       compra, e inflaria os relatórios.
+       ================================================================= -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18472678874"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18472678874');
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1131022195911171');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
+
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1131022195911171&amp;ev=PageView&amp;noscript=1"
+    alt=""></noscript>
 
   <!-- Navegação -->
   <nav id="nav" class="nav">

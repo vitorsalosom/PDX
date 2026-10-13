@@ -518,7 +518,8 @@
           }
         }
         var acao = it.link
-          ? '<a class="btn btn--pink webdoor__btn" href="' + esc(it.link) + '" target="_blank" rel="noopener">' +
+          ? '<a class="btn btn--pink webdoor__btn" href="' + esc(it.link) + '" target="_blank" rel="noopener"' +
+            ' data-ingresso="1" data-evento="' + esc(it.titulo || '') + '" data-cidade="' + esc(it.cidade || '') + '">' +
             esc(it.botao || 'Quero ser feliz') + '</a>'
           : '<span class="btn btn--embreve webdoor__btn">' + esc(it.botao || 'Em breve') + '</span>';
         return '<article class="webdoor reveal">' +
@@ -633,6 +634,44 @@
     requestAnimationFrame(function () { box.classList.add('modal--aberto'); });
   }
 
+  /* ---------- medição: clique nos botões de ingresso ----------
+     Marca a intenção de compra para o Google Ads e para o Pixel da Meta.
+     O site é uma página só e a venda acontece fora dele (Zig, Ingresse,
+     Q2), então este clique é o último passo mensurável aqui dentro.
+     A compra concluída tem que ser marcada na plataforma de venda. */
+  var GOOGLE_INICIAR_COMPRA = 'AW-18472678874/YnhNCN2YgIQdENrruuhE';
+
+  function marcarIntencaoDeCompra(dados) {
+    try {
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'InitiateCheckout', {
+          content_name: dados.evento || '',
+          content_category: dados.cidade || ''
+        });
+      }
+    } catch (e) {}
+    try {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          send_to: GOOGLE_INICIAR_COMPRA,
+          value: 1.0,
+          currency: 'BRL'
+        });
+      }
+    } catch (e) {}
+  }
+
+  /* um só ouvinte para a página inteira: vale para os cards, para o
+     calendário e para qualquer botão de ingresso criado depois */
+  document.addEventListener('click', function (e) {
+    var alvo = e.target.closest && e.target.closest('[data-ingresso]');
+    if (!alvo) return;
+    marcarIntencaoDeCompra({
+      evento: alvo.getAttribute('data-evento') || '',
+      cidade: alvo.getAttribute('data-cidade') || ''
+    });
+  }, true);
+
   /* ---------- calendário de parede das edições ---------- */
   var DIAS_SEMANA = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
   var MESES_LONGOS = ['JANEIRO', 'FEVEREIRO', 'MARCO', 'ABRIL', 'MAIO', 'JUNHO',
@@ -725,7 +764,8 @@
       var d = new Date(selecionado + 'T12:00:00');
       elDet.innerHTML = lista.map(function (it) {
         var acao = it.link
-          ? '<a class="btn btn--pink cal__btn" href="' + esc(it.link) + '" target="_blank" rel="noopener">' +
+          ? '<a class="btn btn--pink cal__btn" href="' + esc(it.link) + '" target="_blank" rel="noopener"' +
+            ' data-ingresso="1" data-evento="' + esc(it.titulo || '') + '" data-cidade="' + esc(it.cidade || '') + '">' +
             esc(it.botao || 'Quero ser feliz') + '</a>'
           : '<span class="btn btn--embreve cal__btn">' + esc(it.botao || 'Em breve') + '</span>';
         return '<article class="cal__card">' +
