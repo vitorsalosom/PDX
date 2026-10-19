@@ -7,13 +7,13 @@ window.PDX_CONTENT = {
     "whatsappTexto": "Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20PDX!",
     "whatsapp": "5511992024494",
     "instagram": "pdxcaraiva",
+    "imagemCompartilhar": "/assets/img/uploads/0201010330.jpg",
     "titulo": "PDX — Pagode do Xandó | Caraíva - BA",
     "tiktok": "https://www.tiktok.com/@pdxcaraiva",
     "spotify": "https://open.spotify.com/playlist/52JWYdovktObpAcvMiVWD2",
     "email": "contato@pagodedoxando.com.br",
     "contratarTexto": "Contrate o PDX para o seu evento",
-    "contratarLink": "https://wa.me/5511992024494?text=Ol%C3%A1%2C%20quero%20contratar%20o%20PDX%20para%20o%20meu%20evento!%20",
-    "imagemCompartilhar": "/assets/img/compartilhar.jpg"
+    "contratarLink": "https://wa.me/5511992024494?text=Ol%C3%A1%2C%20quero%20contratar%20o%20PDX%20para%20o%20meu%20evento!%20"
   },
   "sections": [
     {
@@ -170,7 +170,7 @@ window.PDX_CONTENT = {
           "link": "https://chat.whatsapp.com/IHCbGqSFOA76R0wDUm4cP4"
         }
       ],
-      "mosaico": "/assets/img/mosaico-comunidade.jpg"
+      "mosaico": "/assets/img/mosaico-comunidade.webp"
     },
     {
       "enabled": false,
@@ -469,25 +469,28 @@ window.PDX_EVENTOS = {
       "titulo": "Caraíva - BA"
     },
     {
-      "botao": "Em breve",
+      "botao": "Vem ser feliz",
       "titulo": "São Paulo",
       "data": "2026-11-07",
       "cidade": "São Paulo - SP",
       "local": "Bosque Clube Espéria ",
-      "link": ""
+      "link": "https://www.sympla.com.br/evento/pagode-do-xando---sp/3596331?d=pdx"
     },
     {
-      "botao": "Em breve",
+      "botao": "Vem ser feliz",
       "titulo": "Rio de Janeiro",
       "data": "2026-10-17",
-      "cidade": "Rio de Janeiro - RJ"
+      "cidade": "Rio de Janeiro - RJ",
+      "local": "Caza Lagoa",
+      "link": "https://www.sympla.com.br/evento/pdx-caraiva-no-rio-de-janeiro/3581335?d=PDX  "
     },
     {
-      "botao": "Em breve ",
+      "botao": "Vem ser feliz",
       "titulo": "Vitória ",
       "data": "2026-11-14",
       "cidade": "Vitória - ES",
-      "local": "Na Vista"
+      "local": "Na Vista",
+      "link": "https://www.blueticket.com.br/evento/41974/"
     },
     {
       "botao": "Quero ser feliz",
@@ -504,14 +507,6 @@ window.PDX_EVENTOS = {
       "link": "https://zig.tickets/eventos/pagode-do-xando-1909",
       "local": "Casa de Taipa",
       "cidade": "Caraíva - BA"
-    },
-    {
-      "botao": "Quero ser feliz",
-      "data": "2026-09-23",
-      "titulo": "Caraíva",
-      "cidade": "Caraíva - BA",
-      "link": "https://zig.tickets/eventos/pagode-do-xando-2309",
-      "local": "Casa de Taipa"
     },
     {
       "botao": "Quero ser feliz",
@@ -536,6 +531,125 @@ window.PDX_EVENTOS = {
       "local": "Casa de Taipa",
       "link": "https://zig.tickets/eventos/pagode-do-xando-0310",
       "titulo": "Caraíva"
+    },
+    {
+      "botao": "Vem ser feliz",
+      "titulo": "Caraíva",
+      "data": "2026-10-07",
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-0710",
+      "cidade": "Caraíva - BA"
+    },
+    {
+      "botao": "Vem ser feliz",
+      "data": "2026-10-10",
+      "titulo": "Caraíva",
+      "local": "Casa de Taipa",
+      "cidade": "Caraíva - BA",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-1010"
+    },
+    {
+      "botao": "Vem ser feliz",
+      "data": "2026-10-14",
+      "titulo": "Caraíva",
+      "local": "Casa de Taipa",
+      "cidade": "Caraíva - BA",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-1410"
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "Belo Horizonte",
+      "data": "2026-11-28",
+      "cidade": "Belo Horizonte - BH",
+      "local": "Arena Clube"
+    },
+    {
+      "botao": "Vem ser feliz",
+      "titulo": "Caraíva ",
+      "data": "2026-10-21",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-2110"
+    },
+    {
+      "botao": "Vem ser feliz",
+      "titulo": "Caraíva",
+      "data": "2026-10-24",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-2410"
+    },
+    {
+      "botao": "Vem ser feliz",
+      "titulo": "Caraíva ",
+      "data": "2026-10-28",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-2810"
+    },
+    {
+      "botao": "Vem ser feliz",
+      "titulo": "Caraíva - especial Dia das Bruxas",
+      "data": "2026-10-31",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa ",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-3110-especial-dia-das-bruxas"
+    },
+    {
+      "botao": "Em breve ",
+      "titulo": "Caraíva",
+      "data": "2026-11-04",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa "
+    },
+    {
+      "botao": "Em breve",
+      "data": "2026-11-18",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa",
+      "titulo": "Caraíva"
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "Caraíva",
+      "data": "2026-11-21",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa"
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "Caraíva ",
+      "data": "2026-11-20",
+      "cidade": "Caraíva - BA",
+      "local": "Odara Mar"
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "Caraíva ",
+      "data": "2026-11-25",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa"
+    },
+    {
+      "botao": "Em breve",
+      "titulo": "Salvador",
+      "data": "2026-12-19",
+      "cidade": "Salvador - BA"
+    },
+    {
+      "botao": "Quero ser feliz",
+      "link": "https://zig.tickets/eventos/pdx-caraiva-2609",
+      "data": "2026-09-26",
+      "cidade": "Caraíva - BA",
+      "local": "Casa de Taipa",
+      "titulo": "Caraíva"
+    },
+    {
+      "botao": "Em breve",
+      "data": "2026-11-01",
+      "titulo": "Caraíva ",
+      "cidade": "Caraíva - BA",
+      "local": "Odara Mar"
     }
   ]
 };
