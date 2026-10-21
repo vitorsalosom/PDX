@@ -657,6 +657,12 @@
           value: 1.0,
           currency: 'BRL'
         });
+        /* mesmo clique registrado no Analytics, para aparecer no relatorio
+           de audiencia junto com as visitas (e nao so no Google Ads) */
+        window.gtag('event', 'clique_ingresso', {
+          evento: dados.evento || '',
+          cidade: dados.cidade || ''
+        });
       }
     } catch (e) {}
   }
