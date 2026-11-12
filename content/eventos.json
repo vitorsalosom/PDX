@@ -218,10 +218,12 @@
       "local": "Casa de Taipa"
     },
     {
-      "botao": "Em breve",
+      "botao": "Vem ser feliz",
       "titulo": "Salvador",
       "data": "2026-12-19",
-      "cidade": "Salvador - BA"
+      "cidade": "Salvador - BA",
+      "link": "https://vendas.ticketmaker.com.br/evento/pura-vida-festival/29711-878",
+      "local": "Lôro Praia do Flamengo "
     },
     {
       "botao": "Quero ser feliz",
